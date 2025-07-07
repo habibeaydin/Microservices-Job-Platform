@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    # BU kısım compose içindeki servis adını kullanır:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka
